@@ -1,0 +1,28 @@
+<p>databinding works!</p>
+<h2>my name is {{name}}</h2>
+<h2>my name is <span [innerHTML]="name"></span> </h2>
+<h5>My name is : {{name}}</h5>
+<input type="text" id="txtName">
+<input [(ngModel)]="name">
+<textarea id="textarea" [(ngModel)]="txtAreaValue"  name="description" (input)="updateCharacterCount()"></textarea>
+<p>{{txtAreaValue}}</p>
+<p >Maximum characters: {{50-txtAreaCount}}</p>
+<div class="card-group">
+    <div class="card">
+      <img src="{{sachinImage}}" class="card-img-top" alt="..."height="20%" width="20%">
+      <div class="card-body">
+        <h5 class="card-title">Sachin</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img [src]="flowerImage" class="card-img-top" alt="..." height="20%" width="20%">
+      <div class="card-body">
+        <h5 class="card-title">Flower</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
